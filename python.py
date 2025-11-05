@@ -16,24 +16,21 @@ def calculator(a,b,c):
 print(calculator(2,4,"-"))
 
 class bankAccount:
-    __accountNumber = None
-    __accountHolder = None
-    __balance = None
     def __init__(self, accountNumber, accountHolder):
-        self.__accountNumber = _____________
-        self.__accountHolder = _____________
-        self.__balance = _
-    def deposited(self, _____):
-        bankAccount.__balance += ______
-        print(f"Deposited: ${bankAccount.__balance}")
-    def withdrawl(self, _____):
-        bankAccount.__balance -= ______
-        print(f"Deposited: ${bankAccount.__balance}")
+        self.__accountNumber = accountNumber
+        self.__accountHolder = accountHolder
+        self.__balance = 0
+    def deposited(self, deposit):
+        self.__balance += deposit
+        print(f"Deposited: ${self.__balance}")
+    def withdrawl(self, withdraw):
+        self.__balance -= withdraw
+        print(f"Withdrawn: ${self.__balance}")
     def getAccountInfo(self):
-        print(f"Account Number: {__________}")
-        print(f"Account Holder: {}")
-        print(f"Balance: {}")
-bankObj = bankAccount(12212, _____)
-bankObj._____(1000)
-bankObj._____(500)
+        print(f"Account Number: {self.__accountNumber}")
+        print(f"Account Holder: {self.__accountHolder}")
+        print(f"Balance: {self.__balance}")
+bankObj = bankAccount(12212, "pran")
+bankObj.deposited(1000)
+bankObj.withdrawl(500)
 bankObj.getAccountInfo()
